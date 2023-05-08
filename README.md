@@ -72,16 +72,58 @@ We are now at the last part of step by step guide on how to simulate STM32 proje
 
 ## STM 32 CUBE PROGRAM :
 
+```
+NAME: SHOBIKA
+REGISTER NUMBER:21221230096
 
+#include "main.h"
+#include "stdio.h"
+#include "stdbool.h"
+bool pushbutton;
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  while (1)
+  {
+	  pushbutton = HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_4);
+	  	  if (pushbutton == 0)
+	  	    {
+	  		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET);
+	  		  HAL_Delay(250);
+	  		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
+	  		  HAL_Delay(250);
+	  	    }
+	  	  else
+	  		{
+	  		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
+	  		  HAL_Delay(500);
+	  		}
+  }
+}
+```
 
 
 ## Output screen shots of proteus  :
+### LED OFF CONDITION
+![Screenshot (247)](https://user-images.githubusercontent.com/94508142/236892835-a55d4b07-163c-4f4d-a40f-312ed354c9f3.png)
 
 
+
+
+### LED ON CONDITION
+![Screenshot (248)](https://user-images.githubusercontent.com/94508142/236892176-0f3d7c46-5a56-4226-ab09-7c7ebdf33c0f.png)
 
 
 ## Proteus layout(Add pdf screen shot of circuit here)
- 
+
+![Uploading Screenshot (249).png…]()
+![Uploading Screenshot (249).png…]()
+
+
  
  
  
