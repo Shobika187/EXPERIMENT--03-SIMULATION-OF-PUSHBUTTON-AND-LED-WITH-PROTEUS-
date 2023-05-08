@@ -120,8 +120,8 @@ int main(void)
 
 ## Proteus layout(Add pdf screen shot of circuit here)
 
-![Uploading Screenshot (249).png…]()
-![Uploading Screenshot (249).png…]()
+![Screenshot (249)](https://user-images.githubusercontent.com/94508142/236893716-f663e393-2da1-4b84-9924-02eb567f6a95.png)
+
 
 
  
